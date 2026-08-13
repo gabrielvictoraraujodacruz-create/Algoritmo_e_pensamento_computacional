@@ -1,0 +1,225 @@
+Algoritmo e pensamento computacional 
+
+
+decomposicao direcional é como voce resolve todo o problema em partes 
+
+Linguagem de programacao 
+tem o analisador sintaxe e o semantico para criar as regras das linguas 
+
+API
+Resumindo:
+- É um conjunto de regras e padrões que permite que diferentes sistemas, programas ou componentes conversem entre si.
+- APIs definem como esses programas podem pedir e trocar informações.
+- Exemplo prático: quando um aplicativo no seu celular mostra o clima, ele usa uma API para buscar essa informação em um serviço na internet.
+____________________________________
+
+
+liguagem C
+Aprender C ajuda a formar uma base sólida para transitar com facilidade por outras linguagens modernas, 
+como C++, Java, Python e até mesmo linguagens específicas de automação.
+
+
+________________________
+
+
+Raciocínio Lógico-Matemático
+
+
+
+
+
+
+O desenvolvimento de software é, em sua essência, um exercício de pensamento lógico estruturado. Antes mesmo de escrevermos a primeira linha de código,
+é necessário compreender o problema, dividi-lo em partes menores e organizá-las de forma sequencial e coerente.
+Esse processo mental é o que chamamos de raciocínio lógico-matemático aplicado à programação.
+
+Proposições simples podem ser combinadas com conectivos lógicos, criando proposições compostas. Os principais são:
+
+• E (conjunção) -- verdadeiro somente se as duas partes forem verdadeiras;
+• OU (disjunção) -- verdadeiro se pelo menos uma das partes for verdadeira;
+• NÃO (negação) -- inverte o valor lógico (verdade vira falso e vice-versa);
+• SE...ENTÃO (implicação) -- define uma relação de causa e consequência;
+• SE E SOMENTE SE (bicondicional) -- verdadeiro apenas se ambos os lados tiverem o mesmo valor lógico.
+
+BlOCO É UM CONJUNTO DE INSTRUÇÕES, DEMILITADO POR CHAVES , O QUE ESTA DENTRO DAS CHAVES . 
+
+
+Exemplo prático:
+Imagine a seguinte regra: "Para acessar um sistema, o usuário deve ter mais de 18 anos E possuir cadastro válido."
+Essa é uma proposição composta usando o conectivo E. Na linguagem C, isso seria escrito assim:
+
+
+if (idade > 18 && cadastro_valido) {
+    // Acesso permitido
+}
+
+
+_________________________________
+
+Pseudocódigo
+
+O pseudocódigo é como um rascunho estruturado entre a forma como pensamos e o código real que o computador entende.
+Ele permite descrever algoritmos de maneira clara, sem se preocupar ainda com a sintaxe complicada de uma linguagem de programação.
+
+Por que usar pseudocódigo?
+
+• Facilita a organização das ideias;
+• Foca na lógica do problema;
+• Ajuda na comunicação da solução;
+• É ideal para quem está começando a programar.
+
+______________________________
+
+IDE  ferramentas que usamos para escrever, testar e depurar nossos programas 
+
+Sintaxe X Semantica 
+
+Sintaxe: as regras da linguagem , como escrever corretamente (se é no portugues correto )
+Semanticos : é o significado do que é escrever (se faz sentido)
+
+
+exemplo codigo:
+
+#include <stdio.h>
+   int main() {
+    printf("Olá, mundo!\n");
+    return 0;
+}
+
+Explicação detalhada:
+
+#include <stdio.h>
+• O que é: Diretiva de pré-processador;
+• Função: Diz ao compilador para incluir o conteúdo da biblioteca padrão stdio.h (Standard Input/Output);
+• Por que é necessário: Essa biblioteca contém funções de entrada e saída, como printf() e scanf();
+• Nota: O símbolo # indica que isso é tratado antes da compilação (pelo pré-processador).
+
+int main()
+• O que é: Função principal do programa;
+• Função: É o ponto de entrada do programa --- onde a execução começa;
+• int: Indica que a função main retorna um valor inteiro;
+• Parênteses (): Indicam que a função não recebe argumentos (mas poderia: int main(int argc, char *argv[]));
+• Chaves {}: Delimitam o bloco de código que pertence à função.
+
+printf("Olá, mundo!\n");
+• O que é: Chamada da função printf() da biblioteca stdio.h;
+• Função: Imprime a mensagem "Olá, mundo!" no terminal;
+• \n: É um caractere especial que quebra a linha (move o cursor para a linha de baixo);
+• ;: Todo comando em C termina com ponto e vírgula.
+
+return 0;
+• O que é: Instrução que encerra a função main;
+• Função: Indica que o programa terminou com sucesso;
+• Por que 0: Por convenção, o valor 0 indica sucesso; outros valores indicam erro ou códigos específicos de retorno.
+
+#include <stdio.h> - BIBLIOTECA
+int main() - FUNCAO DO PROGRAMA
+printf("Olá, mundo!\n"); = FUNCAO DA BIBLIOTECA 
+return 0; = FECHAMENTO 
+
+
+
+
+O que é ASCII?
+- ASCII (American Standard Code for Information Interchange) é uma tabela que padroniza a representação de caracteres 
+(letras, números, símbolos, sinais de pontuação) em código numérico, usada principalmente em computadores.
+- Cada caractere ASCII corresponde a um número de 0 a 127.
+- Exemplos:
+  - Letra A = código decimal 65
+  - Espaço = código 32
+  - Número 1 = código 49
+
+Para que serve?
+- ASCII permite que computadores, impressoras e outros dispositivos troquem textos de forma padronizada e sem confusão.
+
+
+Unicode é um padrão de codificação de caracteres mais moderno e amplo que o ASCII. Suas principais diferenças e características:
+
+- Unicode representa caracteres de praticamente todas as línguas do mundo, incluindo acentos, letras gregas, símbolos matemáticos, emojis, etc.
+- Enquanto o ASCII usa apenas 7 bits (0–127 caracteres), o Unicode pode usar milhares de códigos diferentes (dezenas de milhares de caracteres).
+- Exemplos:
+  - Letra A: continua sendo 65.
+  - Ã (A com til): no Unicode é 195 (em UTF-8 ocupa dois bytes).
+  - Emoji 😀: código U+1F600.
+- Unicode é fundamental para suportar textos multilíngues, nomes próprios, símbolos especiais e toda a variedade que não cabe no ASCII.
+
+DIFERENÇA DELAS 
+- ASCII é antigo, limitado a 128 caracteres básicos (letras, números, sinais de pontuação em inglês).
+- Unicode é moderno, suporta praticamente todos os caracteres de todos os idiomas, mais símbolos e emojis.
+- ASCII é um subconjunto do Unicode: todo caractere ASCII existe igual no Unicode, mas Unicode tem muito mais coisa.
+- Unicode permite escrever textos em japonês, árabe, emojis, sinais matemáticos, etc. ASCII só cobre o básico do inglês e alguns símbolos de controle.
+- Unicode pode usar diferentes "tamanhos" para um caractere (1, 2, 4 bytes) dependendo da codificação (UTF-8, UTF-16, UTF-32). ASCII sempre usa 1 byte.
+
+
+
+
+
+exemplo de codigo 
+
+#include <stdio.h>
+
+int main() {
+    int idade = 25;
+    float altura = 1.75;
+    char inicial = 'J';
+    
+    printf("Idade: %d anos\n", idade);
+    printf("Altura: %.2f metros\n", altura);
+    printf("Inicial: %c\n", inicial);
+    
+    return 0;
+}
+
+_____________
+
+#include <stdio.h>
+
+int main() {
+    int numero;
+    float preco;
+    char categoria;
+    
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+    
+    printf("Digite o preço: ");
+    scanf("%f", &preco);
+    
+    printf("Digite a categoria: ");
+    scanf(" %c", &categoria);  // espaço antes de %c é importante!
+    
+    printf("Número: %d, Preço: %.2f, Categoria: %c\n", 
+           numero, preco, categoria);
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
