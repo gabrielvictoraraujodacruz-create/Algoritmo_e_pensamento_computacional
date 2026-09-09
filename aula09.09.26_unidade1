@@ -1,0 +1,158 @@
+unidade 1 aula de revisao da avaliaçao
+
+
+A Unidade I consolida a transição da lógica abstrata para a programação
+estruturada
+
+1. Compreensão de Algoritmos
+Dominar o conceito de algoritmo como sequência finita,
+ordenada e não ambígua de passos para resolver problemas
+complexos.
+
+2. Pensamento Computacional
+Aplicar os 4 pilares fundamentais (Decomposição, Padrões,
+Abstração e Algoritmos) na estruturação de soluções
+automatizáveis.
+
+
+3. Lógica e Modelagem
+Desenvolver raciocínio lógico-matemático com proposições,
+operadores lógicos (E, OU, NÃO) e ordem de precedência
+
+
+4. Codificação na Linguagem C
+Dominar a anatomia básica de programas em C, declaração
+de variáveis, tipos de dados primitivos e funções de
+Entrada/Saída (stdio.h)
+
+
+
+     O pensamento computacional estrutura o raciocínio humano em 4 pilares essenciais
+
+
+PILARES
+
+Pilar 1: DECOMPOSIÇÃO
+Divisão de um problema complexo em subproblemas
+menores, mais fáceis de gerenciar e resolver isoladamente.
+
+Pilar 2: RECONHECIMENTO DE PADRÕES
+Identificação de semelhanças, tendências ou características
+repetitivas em problemas para reaproveitar soluções
+
+Pilar 3: ABSTRAÇÃO
+Filtragem dos detalhes irrelevantes para focar estritamente
+nos aspectos essenciais do modelo computacionaL
+
+Pilar 4: ALGORITMOS
+Criação do conjunto de instruções passo a passo, claras e
+finitas, para a automação da solução final
+
+
+                        Modelagem Lógico-Matemática
+Operadores Lógicos em C:
+• && (AND): Verdadeiro apenas se ambas as proposições forem Verdadeiras.
+
+• || (OR): Verdadeiro se pelo menos uma proposição for Verdadeira.
+
+• ! (NOT): Inverte o valor lógico da proposição (V vira F e vice-versa).
+
+Modelagem Matemática: Tradução de equações
+algébricas reais para expressões executáveis,
+respeitando estritamente as regras de precedência
+aritmética e lógica.
+
+O que é uma IDE e o Code::Blocks?
+• Atenção Conceitual: O Code::Blocks NÃO É UM COMPILADOR. Ele é um Ambiente de Desenvolvimento Integrado (IDE) que gerencia ferramentas externas como o GCC/MinGW.
+• Recursos de uma IDE: Editor de texto com realce sintático (coloração), gerenciamento de projetos, compilação em 1 clique e depuração integrada.
+• Outras IDEs Famosas: Visual Studio, Dev-C++, Eclipse, CLion.
+
+
+
+A estrutura linear do C exige declaração de bibliotecas e função principal
+
+
+Análise dos Elementos da Sintaxe
+
+• 1. Diretivas do Pré-processador
+Instrução #include <stdio.h> importa funções de entrada e saída padrão.
+
+• 2. Ponto de Entrada (main)
+Todo programa em C inicia obrigatoriamente pela função int main().
+
+• 3. Delimitadores { } e ;
+Blocos de comando são delimitados por chaves e instruções finalizadas por ponto e vírgula ;.
+
+• 4. Sensibilidade (Case-Sensitive)
+C diferencia maiúsculas de minúsculas (main != Main, int != INT).
+
+
+
+As funções printf() e scanf() conectam a interação do usuário ao programa
+
+
+Saída de Dados: printf()
+Utilizado para exibir mensagens e valores formatados no terminal.
+
+Sintaxe: printf("Texto %especificador", variavel);
+
+Sequências de Escape Frequentes:
+
+• \n : Quebra de linha (pula para a próxima linha).
+• \t : Tabulação horizontal (espaçamento alinhado).
+
+Exemplo:
+printf("Idade: %d anos\n", idade);
+
+
+Entrada de Dados: scanf()
+Utilizado para ler dados digitados pelo usuário via teclado.
+
+Sintaxe: scanf("%especificador", &variavel);
+
+REGRA DE OURO (&):
+
+O operador & é OBRIGATÓRIO no scanf() para passar o endereço de memória onde o valor será armazenado!
+Exemplo:
+scanf("%f", &altura)
+
+
+O exemplo integrador de área do círculo consolida a estrutura completa em C
+
+Destaques do Código
+
+• #define PI: Declaração de constante simbólica via pré-processador.
+
+• float: Escolha do tipo de dado de ponto flutuante para tratar casas decimais.
+
+• %.4f: Formatador de saída que limita a exibição a 4 casas decimais.
+
+• Entrada/Saída: Uso combinado de printf() para orientação ao usuário e scanf() para leitura.
+
+
+Boas práticas de código garantem legibilidade, manutenção e evitam bugs comuns
+
+Boas Práticas de Programação
+
+• Indentação Rígida: Uso de tabulações para destacar a hierarquia dos blocos de comando.
+
+• Comentários Clareadores: Uso de // (linha única) ou /* ... */ (múltiplas linhas) para documentar a lógica.
+
+• Princípios DRY & KISS: 'Don't Repeat Yourself' (evitar duplicação) e 'Keep It Simple' (manter a simplicidade).
+
+Erros Frequentes para Evitar
+
+• 1. Esquecer o Ponto e Vírgula (;): Causa erro sintático imediato de compilação na linha seguinte.
+
+• 2. Omitir o Operador & no scanf(): Provoca falha de segmentação (Segmentation Fault / crash) ao tentar escrever em endereço de memória inválido.
+
+• 3. Especificadores Incorretos: Usar %d para ler variáveis float (gera corrupção de valores na memória).
+
+• Próximos Passos (Unidade II): Estruturas Condicionais (if-else, switch) e Laços de Repetição (while, for).
+
+
+
+
+
+
+
