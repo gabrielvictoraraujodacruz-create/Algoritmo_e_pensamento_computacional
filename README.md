@@ -10,8 +10,9 @@ Repo da matéria de Algoritmos. É onde eu guardo as anotações das aulas e as 
 
 | Arquivo | O que é |
 |---|---|
-| [`anotacoes_aula_12_08_26`](anotacoes_aula_12_08_26) | Anotações de 12/08: decomposição, linguagem de programação, API |
-| [`aula09.09.26_unidade1`](aula09.09.26_unidade1) | Revisão da Unidade 1 pra avaliação |
+| [`anotacoes_aula_12_08_2026.txt`](anotacoes_aula_12_08_2026.txt) | Anotações de 12/08: decomposição, linguagem de programação, API |
+| [`exemplos_c/`](exemplos_c) | Os programas em C das aulas: olá mundo, tipos de dados, `scanf` e par ou ímpar |
+| [`revisao_unidade1_09_09_2026.txt`](revisao_unidade1_09_09_2026.txt) | Revisão da Unidade 1 pra avaliação |
 
 ## 🗺️ O que a matéria cobre
 
