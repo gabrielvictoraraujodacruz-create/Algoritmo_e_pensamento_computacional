@@ -13,6 +13,7 @@ Repo da matéria de Algoritmos. É onde eu guardo as anotações das aulas e as 
 | [`anotacoes_aula_12_08_2026.txt`](anotacoes_aula_12_08_2026.txt) | Anotações de 12/08: decomposição, linguagem de programação, API |
 | [`exemplos_c/`](exemplos_c) | Os programas em C das aulas: olá mundo, tipos de dados, `scanf` e par ou ímpar |
 | [`revisao_unidade1_09_09_2026.txt`](revisao_unidade1_09_09_2026.txt) | Revisão da Unidade 1 pra avaliação |
+| [`unidade2_decisao_repeticao/`](unidade2_decisao_repeticao) | Exercícios da Unidade 2: `if`/`else`, `switch`, `while`, `do while`, `for`, `break`, `continue` e `return` |
 
 ## 🗺️ O que a matéria cobre
 
