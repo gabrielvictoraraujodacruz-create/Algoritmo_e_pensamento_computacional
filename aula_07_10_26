@@ -1,7 +1,7 @@
 anotacoes da aula 
 
 
-calculo 
+*************calculo 
 
 #include <stdio.h>
 
@@ -24,7 +24,7 @@ int main() {
 
 
 
-array
+**********array
 
 #include <stdio.h>
 
@@ -51,7 +51,7 @@ int main() {
 
 
 
-contador
+************contador
 
 
 #include <stdio.h>
@@ -74,7 +74,7 @@ int main() {
 }
 
 
-numeros
+**********numeros
 
 #include <stdio.h>
 
@@ -124,7 +124,6 @@ LISTA DE EXERCÍCIO VI
 //Saída: A soma dos números pares = 12.
 
 #include <stdio.h>
-
 int main() 
 {
     int numeros[5];
@@ -136,12 +135,150 @@ int main()
         
         if (numeros[i] % 2 == 0){
             soma = soma + numeros[i];
-        }
-        
-        
+    }        
     }
-    
     printf("\n A soma dos números pares = %d\n",soma);
     return 0;
+}
+
+*******************************************************************************************
+2) Escreva um programa em Linguagem C que solicite ao usuário 5 números inteiros e os 
+armazene em um vetor (array).
+
+Em seguida, utilizando um laço de repetição (for) e estruturas condicionais (if),
+o programa deve percorrer o vetor e identificar:
+
+O maior número digitado.
+O menor número digitado.
+
+#include <stdio.h>
+int main()
+{
+    int numeros[5];
+    int maior, menor;
+    printf("Boa noite\n");
+    printf("digite os 5 números inteiros:\n");
+    for (int i =0 ; i<5; i++)
+    {
+        scanf("%d", &numeros[i]);
+    }
+    maior = numeros[0];
+    menor = numeros[0];
+    for (int i = 0; i<5; i++)
+    {
+        if (numeros[i] > maior)
+        {
+            maior = numeros[i];
+        }
+        if (numeros[i] < menor)
+        {
+            menor = numeros[i];
+        }
+    }
+    printf("O maior número digitado é:   %d\n", maior);
+    printf("O menor número digitado é:   %d\n", menor);
+    return 0;
+}
+***********************************************************************
+3) Escreva um programa em Linguagem C que contenha uma função chamada calcularDobro.
+
+A função deve receber um número inteiro como parâmetro, calcular e retornar o dobro desse valor.
+Na função principal (main), solicite um número ao usuário, chame a função calcularDobro e exiba o 
+resultado retornado na tela.
+
+#include <stdio.h>
+int calcularDobro(int numero) {
+    return numero * 2;
+}
+
+int main() {
+    int valor, resultado;
+
+    printf("Digite um número inteiro: ");
+    scanf("%d", &valor);
+
+    resultado = calcularDobro(valor);
+
+    printf("O dobro de %d é %d\n", valor, resultado);
+
+    return 0;
+}
+
+**************************************************************************
+4) Você foi designado para desenvolver o protótipo de uma calculadora básica em Linguagem C.
+Para garantir a organização e modularidade do código, a lógica de cada operação matemática deve ser
+isolada em funções específicas.
+Escreva um programa que exiba um menu de opções, solicite ao usuário a operação desejada e 
+os dois números operandos. Em seguida, utilize a estrutura switch/case para chamar a função
+correspondente e exibir o resultado na tela.
+\\Requisitos do Programa:
+Criação das Funções:
+float somar(float a, float b) — retorna a soma dos dois números.
+float subtrair(float a, float b) — retorna a diferença.
+float multiplicar(float a, float b) — retorna o produto.
+float dividir(float a, float b) — retorna a divisão (tratar divisão por zero).
+Estrutura do Menu e Seleção:
+Apresentar o seguinte menu no terminal:
+1. Somar
+2. Subtrair
+3. Multiplicar
+4. Dividir
+ 
+Utilizar a estrutura switch/case para direcionar a execução com base na opção escolhida pelo usuário.
+Tratar opções inválidas utilizando a cláusula default.
+Exemplo de Execução Esperada no Terminal
+======================================
+        CALCULADORA EM C - UDF        
+======================================
+ 1. Somar
+2. Subtrair
+3. Multiplicar
+4. Dividir
+ 
+Escolha a operacao desejada (1-4): 4
+Digite o primeiro numero: 15.0
+Digite o segundo numero: 3.0
+ --------------------------------------
+Resultado da divisao: 5.00
+======================================
+
+#include <stdio.h>
+int main(void) {
+    float num1, num2, resultado;
+    char operador;
+
+    printf("------USE A CALCULADORA!!!------\n");
+    printf("------Digite o primeiro número:------\n");
+    scanf("%f", &num1);
+
+    printf("------Digite o operador (+,-,*,/):------\n");
+    scanf(" %c", &operador);
+
+    printf("------Digite o segundo número:------\n");
+    scanf("%f", &num2);
+
+    switch (operador) {
+        case '+':
+            resultado = num1 + num2;
+            printf("------O resultado da soma é: %.2f------\n", resultado);
+            break;
+        case '-':
+        resultado = num1 - num2;
+        printf("------O resultado da subtração é: %.2f------\n", resultado);
+          break;
+        case '*':
+            resultado = num1 * num2;
+            printf("------O resultado da multiplicação é: %.2f------\n", resultado);
+            break;
+        case '/':
+            if (num2 != 0) {
+                resultado = num1 / num2;
+            } else {
+                printf("------Erro: Divisão por zero!------\n");
+                return 1;
+            }
+            printf("------O resultado da divisão é: %.2f------\n", resultado);
+            break;
+        }
 }
 
