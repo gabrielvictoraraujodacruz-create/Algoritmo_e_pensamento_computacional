@@ -134,30 +134,204 @@ int main() {
 }
 
 
+exercicio em aula 
+
+Lista de exercícios VIII - Linguagem C
+
+
+
+Exercício 1 — Controle de consumo de energia elétrica
+Uma empresa deseja monitorar o consumo de energia elétrica de uma instalação durante 7 dias. 
+Desenvolva um programa em C que armazene em um vetor o consumo diário, em kWh.
+
+
+Ao final, o programa deverá:
+- Calcular o consumo total da semana.
+- Calcular o consumo médio diário.
+- Identificar o dia de maior consumo e seu respectivo valor.
+- Contar quantos dias apresentaram consumo superior a 250 kWh.
+Requisitos técnicos: utilize um vetor de 7 posições e uma estrutura de repetição para ler os dados e calcular os resultados.
 
 
 
 
+#include <stdio.h>
+
+#define DIAS 7
+#define LIMITE 250.0
+
+int main() {
+    float consumo[DIAS];
+    float total = 0, media, maior;
+    int diaMaior = 0, diasAcima = 0;
+    int i;
+
+    printf("=== Controle de consumo de energia eletrica ===\n\n");
+
+    // Leitura do consumo diario
+    for (i = 0; i < DIAS; i++) {
+        do {
+            printf("Consumo do dia %d (kWh): ", i + 1);
+            scanf("%f", &consumo[i]);
+            if (consumo[i] < 0) {
+                printf("Valor invalido! O consumo nao pode ser negativo.\n");
+            }
+        } while (consumo[i] < 0);
+    }
+
+    // Calculos
+    maior = consumo[0];
+    for (i = 0; i < DIAS; i++) {
+        total += consumo[i];
+
+        if (consumo[i] > maior) {
+            maior = consumo[i];
+            diaMaior = i;
+        }
+
+        if (consumo[i] > LIMITE) {
+            diasAcima++;
+        }
+    }
+    media = total / DIAS;
+
+    // Resultados
+    printf("\n=== Resultados da semana ===\n");
+    printf("Consumo total: %.2f kWh\n", total);
+    printf("Consumo medio diario: %.2f kWh\n", media);
+    printf("Dia de maior consumo: dia %d (%.2f kWh)\n", diaMaior + 1, maior);
+    printf("Dias com consumo acima de %.0f kWh: %d\n", LIMITE, diasAcima);
+
+    return 0;
+}
 
 
 
+Exercício 2 - Massa Radioativa
+
+Um determinado material radioativo perde metade de sua massa a cada 50 segundos.
+Dada a massa inicial em gramas, faça um programa em C que calcule o tempo necessário para que essa massa se torne menor que 0,5 grama.
+O programa deve imprimir a massa inicial, a massa final e o tempo calculado em horas, minutos e segundos
+
+#include <stdio.h>
+
+#define MEIA_VIDA 50   
+#define MASSA_MIN 0.5  
+
+int main() {
+    float massaInicial, massa;
+    int tempo = 0;
+    int horas, minutos, segundos;
+
+    printf("=== Massa radioativa ===\n\n");
+
+    do {
+        printf("Massa inicial (g): ");
+        scanf("%f", &massaInicial);
+        if (massaInicial <= 0) {
+            printf("Valor invalido! A massa deve ser maior que zero.\n");
+        }
+    } while (massaInicial <= 0);
+
+  
+    massa = massaInicial;
+    while (massa >= MASSA_MIN) {
+        massa = massa / 2;
+        tempo += MEIA_VIDA;
+    }
+
+    
+    horas = tempo / 3600;
+    minutos = (tempo % 3600) / 60;
+    segundos = tempo % 60;
+
+    printf("\n=== Resultado ===\n");
+    printf("Massa inicial: %.2f g\n", massaInicial);
+    printf("Massa final: %.2f g\n", massa);
+    printf("Tempo: %dh %dmin %ds (%d segundos)\n", horas, minutos, segundos, tempo);
+
+    return 0;
+}
 
 
 
+Exercício 3 - Registro de passageiros
+
+Uma empresa de ônibus deseja registrar a quantidade de passageiros transportados em 6 viagens.
+Elabore um programa que leia a quantidade de passageiros de cada viagem e armazene os valores em um vetor.
+O programa deverá:
+Calcular o total de passageiros.
+Identificar a viagem com maior número de passageiros.
+Contar quantas viagens transportaram mais de 30 passageiros.
+Requisitos: utilize um vetor de inteiros, laços de repetição e as funções calcularTotal() e contarViagens().
+
+#include <stdio.h>
+
+#define VIAGENS 6
+#define LIMITE 30
+
+int calcularTotal(int passageiros[], int n) {
+    int total = 0;
+    int i;
+
+    for (i = 0; i < n; i++) {
+        total += passageiros[i];
+    }
+    return total;
+}
+
+int contarViagens(int passageiros[], int n, int limite) {
+    int cont = 0;
+    int i;
+
+    for (i = 0; i < n; i++) {
+        if (passageiros[i] > limite) {
+            cont++;
+        }
+    }
+    return cont;
+}
+
+int main() {
+    int passageiros[VIAGENS];
+    int total, acima, maior;
+    int viagemMaior = 0;
+    int i;
+
+    printf("=== Registro de passageiros ===\n\n");
+
+    for (i = 0; i < VIAGENS; i++) {
+        do {
+            printf("Passageiros da viagem %d: ", i + 1);
+            scanf("%d", &passageiros[i]);
+            if (passageiros[i] < 0) {
+                printf("Valor invalido! A quantidade nao pode ser negativa.\n");
+            }
+        } while (passageiros[i] < 0);
+    }
+
+    maior = passageiros[0];
+    for (i = 1; i < VIAGENS; i++) {
+        if (passageiros[i] > maior) {
+            maior = passageiros[i];
+            viagemMaior = i;
+        }
+    }
+
+    total = calcularTotal(passageiros, VIAGENS);
+    acima = contarViagens(passageiros, VIAGENS, LIMITE);
+
+    printf("\n=== Resultados ===\n");
+    printf("Total de passageiros: %d\n", total);
+    printf("Viagem com mais passageiros: viagem %d (%d passageiros)\n", viagemMaior + 1, maior);
+    printf("Viagens com mais de %d passageiros: %d\n", LIMITE, acima);
+
+    return 0;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+e por hoje é só fiquei meio maluco depois desse codigo 
 
 
 
