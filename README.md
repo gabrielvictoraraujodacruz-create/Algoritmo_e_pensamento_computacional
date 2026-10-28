@@ -15,6 +15,7 @@ Repo da matéria de Algoritmos. É onde eu guardo as anotações das aulas e as 
 | [`revisao_unidade1_09_09_2026.txt`](revisao_unidade1_09_09_2026.txt) | Revisão da Unidade 1 pra avaliação |
 | [`unidade2_decisao_repeticao/`](unidade2_decisao_repeticao) | Exercícios da Unidade 2: `if`/`else`, `switch`, `while`, `do while`, `for`, `break`, `continue` e `return` |
 | [`vetores_funcoes/`](vetores_funcoes) | Exercícios de vetores e funções: vendas da semana, ordem inversa, desconto, média de notas e números repetidos |
+| [`atividade_avaliativa_II/`](atividade_avaliativa_II) | Atividade Avaliativa II: abastecimento de caminhão, desempenho da turma e controle de estoque com menu |
 
 ## 🗺️ O que a matéria cobre
 
